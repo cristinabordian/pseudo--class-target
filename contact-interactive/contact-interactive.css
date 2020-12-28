@@ -1,0 +1,153 @@
+body {
+    background-color: #222;
+    color: aliceblue;
+    margin: 0;
+    font-family: sans-serif;
+}
+.contacts ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contacts li {
+    display: table;
+    padding: .25em;
+}
+.contacts li > * {
+    display: table-cell;
+    vertical-align: middle;
+    transition: 1.0s; /*!!!Proporty display nu poate fi animat intr-o maniera mai dinamica din cauza ca el poate lua doar valoarea "none" sau "modul de afisare". Alta metoda este de a folosi propietatea opacity*/
+}
+
+
+
+.contacts .menu-more a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    background-color: black;
+    
+    
+
+}
+
+.contacts .avatar {
+    margin: 0;
+    padding-right: 1em ;
+}
+
+.contacts .avatar img {
+    height: 3em;
+    
+}
+
+.contacts .avatar .status {
+    width: 0.4em;
+    height: 0.4em;
+    display: inline-block;
+    border-radius: 0.4em;
+    margin-left: -1em;
+}
+
+.contacts .info > span {
+    display: table-row;
+}
+
+.contacts .action {
+    padding: 0 3em;
+}
+
+.contacts .action-more a .menu {
+    color: white;
+    font-size: 1em;
+    
+    
+}
+.contacts .action-more a .menu:hover {
+    color:#151515;
+}
+
+.contacts .menu-more>div {
+    
+    display: none;
+    
+}
+   
+.contacts #quickfix:target .menu-more>div {
+    display: table-cell;
+    
+    
+}
+
+
+
+
+.contacts .action a.add {
+      text-decoration: none;
+      background-color: #111;
+      color: #ddd;
+      display: block;
+      /* For styling purposes, we gave this selector display:block so we can apply width/height & border radius. Block doesn't move to a new line because it's placed within a span tag */
+      width: 2em;
+      height: 2em;
+      text-align: center; /*a se afla intr-un bloc, deci centram prin text-align*/
+       line-height: 2em;    /* trick line-height poate fi folosit ptr a centra textul pe verticala doar daca avem doar o singur rand de text*/
+       border-radius: 2em;
+}
+
+.contacts .action a.add:hover {
+    background-color: #151515;
+    color: white;
+
+}
+
+.contacts .add-details>div {
+    /* display: none; */
+    /* opacity: 0; */
+    background-color: #111;
+    width: 0;
+    transition: 1.5s;
+
+    overflow: hidden;
+    white-space: nowrap; /*HW1: Add si Follow sa ramana in acelasi rand*/
+    
+
+}
+ .contacts .add-details>div>a {
+     color: #dddbdb;
+     text-decoration: none;
+     text-transform: uppercase;
+     padding: 0.5em 0.25em;
+     font-family: Georgia;
+ }
+  /* PRINCIPIUL A HREF - TARGET */
+.contacts li:target .add-details > div {
+    /* display: table-cell; */
+    /* opacity:1; */
+    width: 100%;
+    
+}
+
+.contacts li:target > *{
+    transform: translateX(-18em);
+}
+
+
+
+
+
+
+/* ______________________________________________ */
+
+
+.status.off {
+    border: 1px solid #777;
+    background-color: #333;
+}
+.status.on {
+    border: 1px solid green;
+    background-color: lightgreen;
+}
+
+
