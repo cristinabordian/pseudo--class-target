@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Round Nav | :target CSS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .round {
+            width: 200px;
+            height: 200px;
+            background-color: #111;
+            border-radius: 100%;
+        }
+        
+
+        .round a {
+            /* background-color:orange; */
+            display:block;
+            font-size: 10px;
+            height: 10px;
+            /* border: 1px solid black; */
+            /* text-align: right; */
+            margin-bottom: -11px;
+            
+
+            
+        }
+
+       .round .icon * {
+           
+           transform: rotate(180deg);
+           font-size: medium;
+           display: inline-block;
+           
+           position: relative;
+           left: 8px;
+           color:palevioletred;
+        }
+
+        .round a:nth-child(4) {
+            transform: translateY(94px) rotate(-135deg);
+            
+        }
+        .round a:nth-child(3) {
+            transform: translateY(94px) rotate(-180deg);
+        }
+        .round a:nth-child(2) {
+            transform: translateY(94px) rotate(-225deg);
+        }
+        .round a:nth-child(1) {
+            transform: translateY(94px) rotate(-270deg);
+        }
+
+        .round #first {
+            /* background-color: yellowgreen; */
+            height: 150px;
+            width: 150px;
+            transform: translateX(25px) translateY(30px);
+            border-radius: 100%;
+            
+        }
+
+        .round .indicator {
+            width: 200px;
+            height: 10px;
+            /* background-color: green; */
+            margin-left: -25px;
+
+            transform: translateY(71px) rotate(-270deg);
+        }
+
+        #first:target .indicator {
+
+        }
+
+        #second:target .indicator {
+            transform: translateY(71px) rotate(-225deg);
+        }
+
+        #third:target .indicator {
+            transform: translateY(71px) rotate(-180deg);
+        }
+
+        #fourth:target .indicator {
+            transform: translateY(71px) rotate(-135deg);
+            
+        }
+
+        .round .indicator .arrow {
+            display: block;
+            position: relative;
+            font-size: 20px;
+            left: 30px;
+            color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="round">
+        <a href="#first"> <span class="icon"><i class="fab fa-facebook-square"></i></span></a>
+        <a href="#second"><span class="icon"><i class="fab fa-instagram-square"></i></span></a>
+        <a href="#third"><span class="icon"><i class="fab fa-twitter-square"></i></span></a>
+        <a href="#fourth"><span class="icon"><i class="fab fa-pinterest-square"></i></span></a>
+        
+        <div id="first">
+            <div id="second">
+                <div id="third">
+                    <div id="fourth">
+                       <div class="indicator">
+                           <span class="arrow"><i class="fas fa-long-arrow-alt-left"></i></span>
+                       </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+    </nav>
+    
+</body>
+</html>
