@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Round nav | :target</title>
+    <style>
+        body {
+            background-color: #333;
+            color: white;
+        }
+
+        a {
+            color: white;
+        }
+
+        .round .indicator {
+            /* border-top: 1px solid #fff; */
+            /* border-bottom: 1px solid #fff; */
+        }
+
+        /* #first:target {
+            border-top: 1px solid #fff;
+        }
+
+        #second:target+#first {
+            border-bottom: 1px solid #fff;
+        } */
+
+        #first:target .indicator {
+            border-top: 1px solid #fff;
+        }
+
+        #second:target .indicator {
+            border-bottom: 1px solid #fff;
+        }
+
+    </style>
+    
+</head>
+<body>
+    <nav class="round">
+        <a href="#first">1</a>
+        <a href="#second">2</a>
+        
+        <!-- <div id="second"></div>  a doua referinta a href afecteaza acelasi element - metoda prin element vecin #second:target+#first
+        <div class="indicator" id="first">
+            indicator
+        </div> -->
+
+        <!-- <div id="second"> a doua referinta a href afecteaza acelasi element - metoda prin element  parinte   #second:target>#first
+            <div class="indicator" id="first">
+            indicator
+            </div>
+      </div>  -->
+
+      <div id="first">
+          <div id="second">
+              <div class="indicator">
+                  indicator
+              </div>
+          </div>
+      </div>
+    </nav>
+</body>
+</html>
